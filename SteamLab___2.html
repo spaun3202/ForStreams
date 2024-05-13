@@ -27,16 +27,25 @@ font-weight: 500;
 
 
 section {
-       display: flex;
+       display: block;
        overflow-x: hidden;
-  display: table-cell;
-  position: absolute;
-  bottom: 0px;
-left: 15%;
-width: 65%;
+
+width: 100%;
   text-align: left;
 
+
+  position: absolute;
+  bottom: 0px;
+
+
+
+
+
     }
+    .divRUN2 {
+       overflow-x: hidden;
+    }
+
 
     .divRUN {
       white-space: nowrap;
@@ -79,24 +88,7 @@ background-repeat: no-repeat;
 display: block;
 position: absolute;
 }
-#UG3 {
-  background-image: url("https://spaun3202.github.io/ForStreams/S_U_3.png");
-background-position: bottom 0px right 0px;
-background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-display: block;
-position: absolute;
-}
-#UG4 {
-  background-image: url("https://spaun3202.github.io/ForStreams/S_U_4.png");
-background-position: bottom 0px left 0px;
-background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-display: block;
-position: absolute;
-}
+
 
 
 #TMP {
@@ -110,8 +102,8 @@ img  {
   text-align: right;
 
 }
-#BLOCK1{display: block;}
-#BLOCK2{display: block;}
+#BLOCK1{display: block;   padding: 0;  margin: 0;}
+#BLOCK2{display: block;padding: 0;  margin: 0;}
 #Baner {
    display: inline-block;
   text-align: right;
@@ -119,7 +111,8 @@ img  {
         height: 315px;
   padding: 0;
 
-  margin: 0 60px 0 0;
+  margin: 0 0px 0 0;
+
 }
 
 
@@ -130,7 +123,7 @@ img  {
         height: 49px;
 background-image: url("https://imgbly.com/ib/f9MQkusREw.png");
   padding: 0;
-  margin: 0 100px 80px 0;
+  margin: 0 0px 75px 0;
 
 }
 
@@ -290,24 +283,39 @@ font-size: 40px;
 //колаж4 24  "https://iili.io/JjlZWjR.gif"
 //колаж35 20 "https://iili.io/Jj16fB1.gif"
 
-
 //  https://spaun3202.github.io/ForStreams/gulnara/QRSBERguln.png   sberGuln
 //  https://spaun3202.github.io/ForStreams/gulnara/QRTinKguln.png   TinkGuln
 //  https://spaun3202.github.io/ForStreams/gulnara/QR_DA_guln.png   DAGuln
 
 //QrnewUla   "https://spaun3202.github.io/ForStreams/newQR.gif"
 
+//Kollaj_6__12s__LOOP.gif   "https://iili.io/J6nuXZ7.gif"
+//Kollaj_7__12s-loop.gif   "https://iili.io/J6nIrHQ.gif"
+//Kollaj_8__27s-loop.gif   "https://iili.io/J6nIeVe.gif"
+//new_baner_1__9s-loop.gif   "https://spaun3202.github.io/ForStreams/new_baner_1__9s-loop.gif"
+
+
+
+
+
+
 var bg = [ "https://spaun3202.github.io/ForStreams/newQR.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
 "https://imgbly.com/ib/AJ5GRDTUCW.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
-"https://imgbly.com/ib/eSipNJIxpT.gif" , "https://imgbly.com/ib/ipbQu3yN15.png",
-"https://imgbly.com/ib/97DoKhzI5F.gif" , "https://imgbly.com/ib/ipbQu3yN15.png",
 
-"https://spaun3202.github.io/ForStreams/newQR.gif",  "https://imgbly.com/ib/ipbQu3yN15.png",
-"https://iili.io/Jjl7ve9.gif" , "https://imgbly.com/ib/ipbQu3yN15.png",
-"https://iili.io/JjlZWjR.gif" , "https://imgbly.com/ib/ipbQu3yN15.png",
-"https://iili.io/Jj16fB1.gif",  "https://imgbly.com/ib/ipbQu3yN15.png"
+"https://spaun3202.github.io/ForStreams/newQR.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+"https://spaun3202.github.io/ForStreams/new_baner_1__9s-loop.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+
+"https://spaun3202.github.io/ForStreams/newQR.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+"https://iili.io/J6nuXZ7.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+
+"https://spaun3202.github.io/ForStreams/newQR.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+"https://iili.io/J6nIrHQ.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+
+"https://spaun3202.github.io/ForStreams/newQR.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+"https://iili.io/J6nIeVe.gif" ,  "https://imgbly.com/ib/ipbQu3yN15.png",
+
 ];
-var time = [20,10,12,10,8,10,12,10,20,10,29,5,29,5,25,10];
+var time = [40,25,20,15,  40,25,20,15,  40,25,20,15,  40,25,20,15,   40,10,40,10, ];
 
 
 var index = 0;
@@ -316,7 +324,7 @@ let timer = setTimeout(function tick() {
 
 add_src(bg[index% bg.length])
 timer = setTimeout(tick, time[index++% bg.length]*1000);
-if (index > 32) location.reload();
+if (index > 40) location.reload();
 }, 2000);
 
 
@@ -351,15 +359,16 @@ if (index > 32) location.reload();
 
 
 
-<section class="BCpng_2">
+<section class="">
+    <div class="BCpng_2 divRUN2">
     <div class="divRUN">
-<a class="Italic fontfamily3">Музыка</a> <a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS bigFSgra_Rastafari_b">♪</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_ByDesign_b">♫</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_RyooPal_b">♪</a><a class="smallFS  cl1 fontfamily3COLORb2">♪</a>  <a class="fontfamily3COLORb1">100</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="Italic fontfamily3">Музыка</a> <a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_Flare_b">♪</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_ByDesign_b">♫</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_RyooPal_b">♪</a><a class="smallFS  cl1 fontfamily3COLORb2">♪</a>  <a class="fontfamily3COLORb1">100</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class="fontfamily3">Погадаю</a> <a class="fontfamily3COLORb1">50</a><a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a class="fontfamily3">Приседания</a> <a class="fontfamily3COLORb1">200</a><a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class="fontfamily3">Намочить</a> <a class=" fontfamily3">↺↻</a> <a class="fontfamily3COLORb1">1000</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class="Italic fontfamily3">Танец</a> <a class="fontfamily3COLORb2">+ </a><a class="Italic fontfamily3">музыка</a> <a class="fontfamily3COLORb1">200</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class="fontfamily3">Съем кусочек лимона</a> <a class="fontfamily3COLORb1">200</a><a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- <a class="Italic fontfamily3">Музыка</a> <a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS bigFSgra_Rastafari_b">♪</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_ByDesign_b">♫</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_RyooPal_b">♪</a><a class="smallFS  cl1 fontfamily3COLORb2">♪</a>  <a class="fontfamily3COLORb1">100</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="Italic fontfamily3">Музыка</a> <a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_Flare_b">♪</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_ByDesign_b">♫</a><a class="smallFS fontfamily3COLORb2">♫</a><a class="bigFS gra_RyooPal_b">♪</a><a class="smallFS  cl1 fontfamily3COLORb2">♪</a>  <a class="fontfamily3COLORb1">100</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class="fontfamily3">Погадаю</a> <a class="fontfamily3COLORb1">50</a><a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a class="fontfamily3">Приседания</a> <a class="fontfamily3COLORb1">200</a><a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a class="fontfamily3">Намочить</a> <a class=" fontfamily3">↺↻</a> <a class="fontfamily3COLORb1">1000</a><a class="fontfamily3COLORb2 smallFS">₽</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -377,7 +386,7 @@ if (index > 32) location.reload();
 
 
 
- </div>
+ </div> </div>
 </section>
 
 
