@@ -304,7 +304,7 @@ const { newdata } = octokit.rest.repos.getContent({
 
         if (flagHTML != newdata) {
         flagHTML=newdata;
-            window.location.href="javascript:flagHTML()";
+            window.location.href="javascript:ReplaceContent()";
         }
         else
         {
