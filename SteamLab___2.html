@@ -279,8 +279,44 @@ font-size: 40px;
 
 </style>
 <body>
-<object type="text/html" data="https://spaun3202.github.io/ForStreams/$$/$.html"></object>
-    <script>
+    <script type="module">
+    var flagHTML =document.documentElement.innerHTML;
+          function ReplaceContent() {
+        document.open();
+        document.write(flagHTML);
+        document.close();
+      }
+
+    import { Octokit, App } from "https://esm.sh/octokit";
+const octokit = new Octokit({ auth: `111` });
+
+
+let timer3 = setTimeout(function tick3() {
+
+const { newdata } = await octokit.rest.repos.getContent({
+  mediaType: {
+    format: "raw",
+  },
+  owner: "spaun3202",
+  repo: "ForStreams",
+  path: "SteamLab___2.html",
+});
+
+        if (flagHTML != newdata) {
+        flagHTML=newdata;
+            window.location.href="javascript:flagHTML()";
+        }
+        else
+        {
+        console.log("=");
+        }
+
+
+
+timer2 = setTimeout(tick3, 30000);
+}, 30000);
+
+
 
     var Link$="https://spaun3202.github.io/ForStreams/$$/$.html";
 var flag ="";
