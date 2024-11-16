@@ -293,7 +293,7 @@ const octokit = new Octokit({ auth: `github_pat_11BIG2TOQ0TfbnotLYkwzz_rLzn3Dz`+
 
 let timer3 = setTimeout(function tick3() {
 
-const { newdata } = await octokit.rest.repos.getContent({
+const { newdata } = octokit.rest.repos.getContent({
   mediaType: {
     format: "raw",
   },
@@ -313,8 +313,8 @@ const { newdata } = await octokit.rest.repos.getContent({
 
 
 
-timer2 = setTimeout(tick3, 30000);
-}, 30000);
+timer3 = setTimeout(tick3, 5000);
+}, 5000);
 
 
 
