@@ -279,9 +279,9 @@ font-size: 40px;
 
 </style>
 <body>
-    <script type="module">
+    <script type="module" language="Javascript">
     var flagHTML =document.documentElement.innerHTML;
-          function ReplaceContent() {
+      function ReplaceContent() {
         document.open();
         document.write(flagHTML);
         document.close();
@@ -304,7 +304,7 @@ const { newdata } = octokit.rest.repos.getContent({
 
         if (flagHTML != newdata) {
         flagHTML=newdata;
-            window.location.href="javascript:ReplaceContent()";
+            window.location.href='javascript:ReplaceContent()';
         }
         else
         {
@@ -428,8 +428,8 @@ if (index > 10) location.reload();
     <div class="BCpng_2 divRUN2">
     <div class="divRUN">
 
-<a class="fontfamily3">Приседания</a> <a class="fontfamily3COLORb1">&nbsp;200</a>&nbsp;<a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a class="fontfamily3">Приседания</a> <a class="fontfamily3COLORb1">&nbsp;200</a>&nbsp;<a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="Italic fontfamily3">Танец</a> <a class="fontfamily3COLORb2">+ </a><a class="Italic fontfamily3">музыка</a> <a class="fontfamily3COLORb1">&nbsp;300</a>&nbsp;<a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="Italic fontfamily3">Танец</a> <a class="fontfamily3COLORb2">+ </a><a class="Italic fontfamily3">музыка</a> <a class="fontfamily3COLORb1">&nbsp;300</a>&nbsp;<a class="fontfamily3COLORb2 smallFS">₽</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 </div> </div>
