@@ -280,20 +280,18 @@ font-size: 40px;
 </style>
 <body>
     <script type="module" language="Javascript">
-    var flagHTML =document.documentElement.innerHTML;
-      function ReplaceContent() {
-        document.open();
-        document.write(flagHTML);
-        document.close();
-      }
+   
+        var flagHTML =document.documentElement.innerHTML;
 
-    import { Octokit, App } from "https://esm.sh/octokit";
+    import { Octokit, App } from "https://esm.sh/octokit@4.0.2";
 const octokit = new Octokit({ auth: `github_pat_11BIG2TOQ0TfbnotLYkwzz_rLzn3Dz`+`k9ZAHpstuL9gj0Xuj9OZmaCR20gJEsCdA3JtX2V3QQ6LRZLUVtrD` });
+const {
+  data: { login },
+} = await octokit.rest.users.getAuthenticated();
+console.log("Hello, %s", login);
 
-
-let timer3 = setTimeout(function tick3() {
-
-const { newdata } = octokit.rest.repos.getContent({
+async function fff() {
+const { data } = await octokit.rest.repos.getContent({
   mediaType: {
     format: "raw",
   },
@@ -301,50 +299,24 @@ const { newdata } = octokit.rest.repos.getContent({
   repo: "ForStreams",
   path: "SteamLab___2.html",
 });
-
+//return atob(data.content);
+return data;
+}
+  let timer3 = setTimeout(await tick3, 3000);
+async function tick3() {
+var newdata =await fff();
         if (flagHTML != newdata) {
                 console.log("!=");
-        flagHTML=newdata;
-              function ReplaceContent() {
-        document.open();
-        document.write(flagHTML);
-        document.close();
-      }
-            window.location.href='javascript:ReplaceContent()';
+                document.documentElement.innerHTML= newdata;
         }
         else
         {
         console.log("=");
+
         }
 
-
-
-timer3 = setTimeout(tick3, 5000);
-}, 5000);
-
-
-
-    var Link$="https://spaun3202.github.io/ForStreams/$$/$.html";
-var flag ="";
-get_information(Link$, function(text) {flag=text});
-
-function get_information(link, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", link, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) {
-            callback(xhr.responseText);
-        }
-    };
-    xhr.send(null);
+timer3 = setTimeout(await tick3, 3000);
 }
-
-let timer2 = setTimeout(function tick2() {
-
-get_information(Link$, function(text) {if (text !=flag && flag!="" ) 
-{location.reload();}});
-timer2 = setTimeout(tick2, 2000);
-}, 2000);
 
 
 
