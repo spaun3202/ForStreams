@@ -305,7 +305,7 @@ return data;
   let timer3 = setTimeout(await tick3, 3000);
 async function tick3() {
 var newdata =await fff();
-        if (flagHTML != newdata) {
+        if (document.documentElement.innerHTML != newdata) {
                 console.log("!=");
                 document.documentElement.innerHTML= newdata;
         }
