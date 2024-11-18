@@ -281,7 +281,7 @@ font-size: 40px;
 <body>
     <script type="module" language="Javascript">
    
-        var flagHTML =document.documentElement.innerHTML;
+        var flagHTML ="60";
 
     import { Octokit, App } from "https://esm.sh/octokit@4.0.2";
 const octokit = new Octokit({ auth: `github_pat_11BIG2TOQ0TfbnotLYkwzz_rLzn3Dz`+`k9ZAHpstuL9gj0Xuj9OZmaCR20gJEsCdA3JtX2V3QQ6LRZLUVtrD` });
@@ -302,12 +302,24 @@ const { data } = await octokit.rest.repos.getContent({
 //return atob(data.content);
 return data;
 }
+async function fff0() {
+const { data } = await octokit.rest.repos.getContent({
+  mediaType: {
+    format: "raw",
+  },
+  owner: "spaun3202",
+  repo: "ForStreams",
+  path: "$$/$.html",
+});
+//return atob(data.content);
+return data;
+}
   let timer3 = setTimeout(await tick3, 3000);
 async function tick3() {
-var newdata =await fff();
-        if (document.documentElement.innerHTML != newdata) {
+var newflagHTML =await fff0();
+        if (flagHTML != newflagHTML) {
                 console.log("!=");
-                document.documentElement.innerHTML= newdata;
+                document.documentElement.innerHTML= =await fff();
         }
         else
         {
